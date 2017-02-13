@@ -15,6 +15,14 @@
 		AAF7923B1E514C5F00B0F825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF792391E514C5F00B0F825 /* LaunchScreen.storyboard */; };
 		AAF792461E514C5F00B0F825 /* CoreDataLearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792451E514C5F00B0F825 /* CoreDataLearnTests.swift */; };
 		AAF792511E514C5F00B0F825 /* CoreDataLearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792501E514C5F00B0F825 /* CoreDataLearnUITests.swift */; };
+		AAF792781E515FE600B0F825 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792701E515FE600B0F825 /* Image+CoreDataClass.swift */; };
+		AAF792791E515FE600B0F825 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792711E515FE600B0F825 /* Image+CoreDataProperties.swift */; };
+		AAF7927A1E515FE600B0F825 /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792721E515FE600B0F825 /* ItemType+CoreDataClass.swift */; };
+		AAF7927B1E515FE600B0F825 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792731E515FE600B0F825 /* ItemType+CoreDataProperties.swift */; };
+		AAF7927C1E515FE600B0F825 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792741E515FE600B0F825 /* Item+CoreDataClass.swift */; };
+		AAF7927D1E515FE600B0F825 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792751E515FE600B0F825 /* Item+CoreDataProperties.swift */; };
+		AAF7927E1E515FE600B0F825 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792761E515FE600B0F825 /* Store+CoreDataClass.swift */; };
+		AAF7927F1E515FE600B0F825 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF792771E515FE600B0F825 /* Store+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		AAF7924C1E514C5F00B0F825 /* CoreDataLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF792501E514C5F00B0F825 /* CoreDataLearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataLearnUITests.swift; sourceTree = "<group>"; };
 		AAF792521E514C5F00B0F825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF792701E515FE600B0F825 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataClass.swift"; path = "CoreDataLearn/Model /Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AAF792711E515FE600B0F825 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Image+CoreDataProperties.swift"; path = "CoreDataLearn/Model /Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AAF792721E515FE600B0F825 /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ItemType+CoreDataClass.swift"; path = "CoreDataLearn/Model /ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AAF792731E515FE600B0F825 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ItemType+CoreDataProperties.swift"; path = "CoreDataLearn/Model /ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AAF792741E515FE600B0F825 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataClass.swift"; path = "CoreDataLearn/Model /Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AAF792751E515FE600B0F825 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Item+CoreDataProperties.swift"; path = "CoreDataLearn/Model /Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AAF792761E515FE600B0F825 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Store+CoreDataClass.swift"; path = "CoreDataLearn/Model /Store+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AAF792771E515FE600B0F825 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Store+CoreDataProperties.swift"; path = "CoreDataLearn/Model /Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,7 @@
 		AAF792211E514C5F00B0F825 = {
 			isa = PBXGroup;
 			children = (
+				AAF7926E1E515D3D00B0F825 /* Model */,
 				AAF7922C1E514C5F00B0F825 /* CoreDataLearn */,
 				AAF792441E514C5F00B0F825 /* CoreDataLearnTests */,
 				AAF7924F1E514C5F00B0F825 /* CoreDataLearnUITests */,
@@ -126,6 +143,29 @@
 				AAF792521E514C5F00B0F825 /* Info.plist */,
 			);
 			path = CoreDataLearnUITests;
+			sourceTree = "<group>";
+		};
+		AAF7926E1E515D3D00B0F825 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAF792701E515FE600B0F825 /* Image+CoreDataClass.swift */,
+				AAF792721E515FE600B0F825 /* ItemType+CoreDataClass.swift */,
+				AAF792741E515FE600B0F825 /* Item+CoreDataClass.swift */,
+				AAF792761E515FE600B0F825 /* Store+CoreDataClass.swift */,
+				AAF7926F1E515D4400B0F825 /* Generated */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AAF7926F1E515D4400B0F825 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				AAF792711E515FE600B0F825 /* Image+CoreDataProperties.swift */,
+				AAF792731E515FE600B0F825 /* ItemType+CoreDataProperties.swift */,
+				AAF792751E515FE600B0F825 /* Item+CoreDataProperties.swift */,
+				AAF792771E515FE600B0F825 /* Store+CoreDataProperties.swift */,
+			);
+			name = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF7927A1E515FE600B0F825 /* ItemType+CoreDataClass.swift in Sources */,
 				AAF792361E514C5F00B0F825 /* CoreDataLearn.xcdatamodeld in Sources */,
+				AAF792791E515FE600B0F825 /* Image+CoreDataProperties.swift in Sources */,
 				AAF792301E514C5F00B0F825 /* ViewController.swift in Sources */,
+				AAF7927F1E515FE600B0F825 /* Store+CoreDataProperties.swift in Sources */,
 				AAF7922E1E514C5F00B0F825 /* AppDelegate.swift in Sources */,
+				AAF7927B1E515FE600B0F825 /* ItemType+CoreDataProperties.swift in Sources */,
+				AAF7927D1E515FE600B0F825 /* Item+CoreDataProperties.swift in Sources */,
+				AAF7927E1E515FE600B0F825 /* Store+CoreDataClass.swift in Sources */,
+				AAF7927C1E515FE600B0F825 /* Item+CoreDataClass.swift in Sources */,
+				AAF792781E515FE600B0F825 /* Image+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +568,7 @@
 				AAF792571E514C5F00B0F825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAF792581E514C5F00B0F825 /* Build configuration list for PBXNativeTarget "CoreDataLearnTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +577,7 @@
 				AAF7925A1E514C5F00B0F825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAF7925B1E514C5F00B0F825 /* Build configuration list for PBXNativeTarget "CoreDataLearnUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +586,7 @@
 				AAF7925D1E514C5F00B0F825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
