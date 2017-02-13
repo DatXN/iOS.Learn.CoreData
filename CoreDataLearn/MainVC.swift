@@ -39,12 +39,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = controller.sections {
             let sectionInfo = sections[section]
+            print(sectionInfo.numberOfObjects)
             return sectionInfo.numberOfObjects
         }
         return 0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = controller.sections {
+            print(sections.count)
+
             return sections.count
         }
         return 0
@@ -78,9 +81,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        // This function will be called when endUpdates finish and fetch data is called, without this, the section will fail
         switch (type) {
         case.insert:
-            if let newIndexPath = indexPath {
+            if let newIndexPath = newIndexPath {
                 tableView.insertRows(at: [newIndexPath], with: .fade)
             }
             break
@@ -107,7 +111,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
 
         }
     }
-    func generateTestData(){
+    func generateTestData() {
         let item = Item(context: context)
         item.title = "A Home"
         item.price = 300000

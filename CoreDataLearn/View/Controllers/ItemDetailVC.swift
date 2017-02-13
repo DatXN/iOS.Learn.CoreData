@@ -53,6 +53,11 @@ class ItemDetailVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         let fetchRequest: NSFetchRequest<Store> = Store.fetchRequest()
         do {
             self.stores = try context.fetch(fetchRequest)
+            if(self.stores.count <= 0){
+                createStoreData()
+                getStores()
+            }
+            
             self.storePicker.reloadAllComponents()
 
         } catch {
