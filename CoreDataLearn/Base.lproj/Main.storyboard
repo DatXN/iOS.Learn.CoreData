@@ -33,12 +33,15 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segSort_Changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="zqJ-tP-IMu"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="42M-wX-lJ3">
                                 <rect key="frame" x="16" y="132" width="288" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="118" id="3FU-fA-XbM" customClass="ItemCell" customModule="CoreDataLearn" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="118" id="3FU-fA-XbM" customClass="ItemCell" customModule="CoreDataLearn" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3FU-fA-XbM" id="lY6-o2-dm6">
@@ -165,6 +168,9 @@
                                     <constraint firstAttribute="width" constant="100" id="Pzl-mU-I0s"/>
                                     <constraint firstAttribute="height" constant="100" id="kpt-VK-Edh"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="btnImage_OnPressed:" destination="AQC-2y-jUT" eventType="touchUpInside" id="oeL-JO-ogC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOS-0Y-51P" customClass="CustomTextField" customModule="CoreDataLearn" customModuleProvider="target">
                                 <rect key="frame" x="124" y="79" width="180" height="40"/>
@@ -254,12 +260,16 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="8mr-2b-ogu">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="1v4-58-fWf">
                             <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnDeleteItem_OnPressed:" destination="AQC-2y-jUT" id="Tay-Dj-j5Z"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="cTf-J9-b4U" id="IP4-mi-4ZC"/>
                         <outlet property="priceField" destination="c5s-GN-f8b" id="BSA-vK-BhX"/>
                         <outlet property="storePicker" destination="tnI-ZJ-re5" id="ccJ-SR-akC"/>
+                        <outlet property="thumbImg" destination="aDc-aQ-1Ex" id="kCI-R1-Juw"/>
                         <outlet property="titleField" destination="eOS-0Y-51P" id="ryC-ac-2py"/>
                     </connections>
                 </viewController>

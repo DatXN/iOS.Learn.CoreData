@@ -39,15 +39,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = controller.sections {
             let sectionInfo = sections[section]
-            print(sectionInfo.numberOfObjects)
+
             return sectionInfo.numberOfObjects
         }
         return 0
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = controller.sections {
-            print(sections.count)
-
             return sections.count
         }
         return 0
@@ -58,7 +56,21 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     func attempFetch() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "create", ascending: false) // Sort by "timestamp" field
-        fetchRequest.sortDescriptors = [dateSort]
+        let priceSort = NSSortDescriptor(key: "price", ascending: false)
+        let titleSort = NSSortDescriptor(key: "title", ascending: false)
+        if segment.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [dateSort]
+
+        } else if segment.selectedSegmentIndex == 1 {
+            fetchRequest.sortDescriptors = [priceSort]
+
+        } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [titleSort]
+
+        }
+
+
+
         // context is a "shortcut" variable inside AppDelegate.swift which we defined
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         // Set outside controller to inside controller
@@ -125,10 +137,27 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         item3.price = 600
         item3.details = "I sometime want to play game. I love my wife but I need sometime for myself."
     }
-    
-    
-    
-    
-    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objs = controller.fetchedObjects, objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailVC", sender: item)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemDetailVC" {
+            if let destinaton = segue.destination as? ItemDetailVC {
+                if let item = sender as? Item {
+                    destinaton.itemToEdit = item
+                }
+            }
+        }
+    }
+
+
+    @IBAction func segSort_Changed(_ sender: Any) {
+        attempFetch()
+        tableView.reloadData()
+    }
 }
 
